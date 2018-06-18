@@ -1,7 +1,7 @@
 <launch>
   
   <!-- Publish point cloud from file -->
-  <node pkg="point_cloud_io" type="read" name="read" output="screen">
+  <node pkg="point_cloud_io" type="read" name="read" output="screen" launch-prefix="xterm -e gdb --args">
     <param name="file_path" value="$(find point_cloud_io)/examples/cow.ply" />
     <param name="topic"     value="/point_cloud" />
     <param name="frame"     value="map" />

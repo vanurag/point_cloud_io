@@ -7,7 +7,7 @@ add_definitions(--std=c++11)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED
   COMPONENTS
-    pcl_ros
+    pcl_catkin
     roscpp
     sensor_msgs
 )
@@ -26,7 +26,7 @@ catkin_package(
     include
 #  LIBRARIES
   CATKIN_DEPENDS
-    pcl_ros
+    pcl_catkin
     roscpp
     sensor_msgs
 #  DEPENDS
