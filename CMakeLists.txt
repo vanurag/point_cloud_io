@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(point_cloud_io)
 
+
 ## Use C++11
 add_definitions(--std=c++11)
 
@@ -10,7 +11,10 @@ find_package(catkin REQUIRED
     pcl_catkin
     roscpp
     sensor_msgs
+    cmake_modules
 )
+
+find_package(Eigen REQUIRED)
 
 ###################################
 ## catkin specific configuration ##
@@ -41,6 +45,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${Eigen_INCLUDE_DIRS}
 )
 
 ## Declare cpp executables
@@ -59,6 +64,7 @@ add_executable(
 target_link_libraries(
   read
   ${catkin_LIBRARIES}
+
 )
 target_link_libraries(
   write
