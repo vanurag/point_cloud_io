@@ -3,7 +3,7 @@ project(point_cloud_io)
 
 
 ## Use C++11
-add_definitions(--std=c++11)
+add_definitions(--std=c++14)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED
